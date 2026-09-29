@@ -3,6 +3,7 @@
 
 #include <stddef.h>
 #include <stdint.h>
+#include <stdbool.h>
 
 /*
 @brief ring buffer state structure 
@@ -48,7 +49,7 @@ bool ring_buffer_push(ring_buffer_t *rb,uint8_t data);
 /* 
 @brief pops a single data from buffer
 @returns true if successfull or false if buffer is empty */
-bool ring_buffer_pop(ring_buffer_t *rb,uint8_t data);
+bool ring_buffer_pop(ring_buffer_t *rb,uint8_t *data);
 
 // Multi byte operations
 
