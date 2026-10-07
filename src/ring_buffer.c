@@ -85,7 +85,7 @@ size_t ring_buffer_write(ring_buffer_t *rb,const uint8_t *data,size_t len){
         // part 1
         memcpy(&rb->buffer[rb->head],data,space_until_end);
         // part 2
-        memcpy(&rb->buffer[rb->head],data+space_until_end,write_len-space_until_end);
+        memcpy(&rb->buffer[0],data+space_until_end,write_len-space_until_end);
     }
 
     rb->head = (rb->head + write_len) % rb->capacity;

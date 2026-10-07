@@ -67,6 +67,6 @@ size_t ring_buffer_write(ring_buffer_t *rb,const uint8_t *data,size_t len);
 @params data pointer to the destination buffer
 @params len number of bytes to be read
 @returns number of bytes successfully read */
-size_t read_ring_buffer(ring_buffer_t *rb,uint8_t *data,size_t len);
+size_t ring_buffer_read(ring_buffer_t *rb,uint8_t *data,size_t len);
 
 #endif  //RING_BUFFER_H
